@@ -4,6 +4,7 @@
   --font: "Inter", sans-serif;
   --primary-col: #161618;
   --secondary-col: #161618;
+  --tertiary-col: #bf4b43;
   --text-col: #fff; 
 
   --primary-font-size: 3rem;
@@ -36,7 +37,7 @@
 }
 
 .title{
-  color: #BF4B43;
+  color: var(--tertiary-col);
   font-size: var(--secondary-font-size);
   margin: 0;
   margin-bottom: 20px;
@@ -61,11 +62,24 @@
   background-color: transparent;
   width: 100%;
   border: none;
+  box-sizing: border-box;
   border-bottom: 1px solid white;
   padding: 10px 30px;
   color: #fff;
 }
 
+.search-location > .searchCity{
+  background-color: var(--tertiary-col);
+  padding: 10px 16px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  
+  &:hover{
+    background-color: #e25349;
+  }
+}
 /* Forcast Styles */
 .condition > .weather-icon{
   width: 150px;
@@ -111,7 +125,7 @@
   flex: 1;
   padding: 35px;
   background-color: var(--primary-col);
-  background-image: url(../public//assets/01.jpg);
+  background-image: url(./assets/01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -143,10 +157,10 @@
     align-items: center;
     justify-content: center ;
     background-color: var(--primary-col);
-    background-image: url(../public//assets/01.jpg);
+    background-image: url(./assets/01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
   }
   
   .card{

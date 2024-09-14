@@ -1,12 +1,16 @@
-import React from 'react'
-import cloud from '../../public/assets/cloud.png'
+import React from 'react';
+import cloud from '../assets/cloud.png';
 
 function Forcast() {
   return (
     <div className='forcast'>
       <div className='condition'>
-        <img src={cloud} alt="icon" className='weather-icon'
-        draggable= 'false' />
+        <img
+          src={cloud}
+          alt='icon'
+          className='weather-icon'
+          draggable='false'
+        />
       </div>
 
       <div className='weather-info'>
@@ -18,8 +22,8 @@ function Forcast() {
           <h3 className='weather-text'>Haze</h3>
         </div>
       </div>
-    </div> 
-  )
+    </div>
+  );
 }
 
-export default Forcast
+export default Forcast;
