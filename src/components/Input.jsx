@@ -4,6 +4,14 @@ import '../App.css';
 import { useWeather } from '../context/weatherContext';
 
 function Input() {
+  const weather = useWeather();
+  const [city, setCity] = useState(weather.searchCity);
+
+  //Handle Srarched City
+  function handleSearch() {
+    weather.setSearchCity(city);
+  }
+
   return (
     <div className='search-location'>
       <img
@@ -12,9 +20,16 @@ function Input() {
         draggable='false'
       />
 
-      <input type='text' placeholder='Search Location' />
+      <input
+        type='text'
+        placeholder='Search Location'
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+      />
 
-      <button className='searchCity'>search</button>
+      <button className='searchCity' onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 }

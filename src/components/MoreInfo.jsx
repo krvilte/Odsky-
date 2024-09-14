@@ -1,29 +1,45 @@
-import React from 'react'
+import React from 'react';
+import { useWeather } from '../context/weatherContext';
 
 function MoreInfo() {
+  const weather = useWeather();
+
   return (
     <div className='more-info'>
       <div className='info'>
-        <span>Lorem</span>
-        <span>000 <b>Cloudy</b></span>
+        <span>
+          <b>Temprature</b>
+        </span>
+        <span>
+          {weather?.data?.current?.temp_c}°c{' '}
+          <b style={{ color: '#bf4b43' }}>
+            {weather?.data?.current?.condition.text}
+          </b>
+        </span>
       </div>
 
       <div className='info'>
-        <span>Lorem</span>
-        <span>000</span>
+        <span>
+          <b>Humidity</b>
+        </span>
+        <span>{weather?.data?.current?.humidity}</span>
       </div>
 
       <div className='info'>
-        <span>Lorem</span>
-        <span>000</span>
+        <span>
+          <b>Air Pressure</b>
+        </span>
+        <span>{weather?.data?.current?.pressure_in}</span>
       </div>
-      
+
       <div className='info'>
-        <span>lorem</span>
-        <span>000</span>
+        <span>
+          <b>cloud</b>
+        </span>
+        <span>{weather?.data?.current?.cloud}</span>
       </div>
     </div>
-  )
+  );
 }
 
-export default MoreInfo
+export default MoreInfo;
