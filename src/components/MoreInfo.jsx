@@ -10,7 +10,7 @@ function MoreInfo() {
         <span>
           <b>Temprature</b>
         </span>
-        <span>
+        <span style={{ textAlign: 'end' }}>
           {weather?.data?.current?.temp_c}°c{' '}
           <b style={{ color: '#bf4b43' }}>
             {weather?.data?.current?.condition.text}
@@ -22,21 +22,27 @@ function MoreInfo() {
         <span>
           <b>Humidity</b>
         </span>
-        <span>{weather?.data?.current?.humidity}</span>
+        <span style={{ textAlign: 'end' }}>
+          {weather?.data?.current?.humidity}
+        </span>
       </div>
 
       <div className='info'>
         <span>
           <b>Air Pressure</b>
         </span>
-        <span>{weather?.data?.current?.pressure_in}</span>
+        <span style={{ textAlign: 'end' }}>
+          {weather?.data?.current?.pressure_in}
+        </span>
       </div>
 
       <div className='info'>
         <span>
           <b>cloud</b>
         </span>
-        <span>{weather?.data?.current?.cloud}</span>
+        <span style={{ textAlign: 'end' }}>
+          {weather?.data?.current?.cloud}
+        </span>
       </div>
     </div>
   );

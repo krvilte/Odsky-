@@ -4,12 +4,13 @@ import { useWeather } from '../context/weatherContext';
 
 function Forcast() {
   const weather = useWeather();
+  const weatherIcon = weather?.data?.current?.condition?.icon;
 
   return (
     <div className='forcast'>
       <div className='condition'>
         <img
-          src={weather?.data?.current?.condition?.icon}
+          src={weatherIcon}
           alt='icon'
           className='weather-icon'
           draggable='false'

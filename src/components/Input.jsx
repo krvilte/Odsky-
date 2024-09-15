@@ -7,6 +7,8 @@ function Input() {
   const weather = useWeather();
   const [city, setCity] = useState(weather.searchCity);
 
+  console.log(weather);
+
   //Handle Srarched City
   function handleSearch() {
     weather.setSearchCity(city);

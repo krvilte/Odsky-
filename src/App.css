@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root{
-  --font: "Inter", sans-serif;
+:root {
+  --font: 'Inter', sans-serif;
   --primary-col: #161618;
   --secondary-col: #161618;
   --tertiary-col: #bf4b43;
-  --text-col: #fff; 
+  --text-col: #fff;
 
   --primary-font-size: 3rem;
   --secondary-font-size: 2rem;
@@ -18,7 +18,7 @@
 }
 
 /* App Styles */
-.weatherApp{
+.weatherApp {
   height: 100vh;
   display: flex;
   background-color: white;
@@ -27,7 +27,7 @@
 }
 
 /* Card Styles */
-.card{
+.card {
   background-color: var(--primary-col);
   width: 360px;
   max-width: 400px;
@@ -36,7 +36,7 @@
   text-align: center;
 }
 
-.title{
+.title {
   color: var(--tertiary-col);
   font-size: var(--secondary-font-size);
   margin: 0;
@@ -47,18 +47,18 @@
 
 /*Input Styles */
 
-.search-location{
+.search-location {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.search-location>img{
+.search-location > img {
   position: relative;
   left: 25px;
 }
 
-.search-location > input{
+.search-location > input {
   background-color: transparent;
   width: 100%;
   border: none;
@@ -68,25 +68,25 @@
   color: #fff;
 }
 
-.search-location > .searchCity{
+.search-location > .searchCity {
   background-color: var(--tertiary-col);
   padding: 10px 16px;
   margin-left: 5px;
   border: none;
   border-radius: 2px;
   color: white;
-  
-  &:hover{
+
+  &:hover {
     background-color: #e25349;
   }
 }
 /* Forcast Styles */
-.condition > .weather-icon{
+.condition > .weather-icon {
   width: 150px;
   margin-bottom: 20px;
 }
 
-.weather-info{
+.weather-info {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -94,20 +94,20 @@
   color: var(--tertiary-col);
 }
 
-.weather-info > .temprature{
+.weather-info > .temprature {
   font-size: var(--primary-font-size);
   font-weight: var(--secondary-font-weight);
   margin: 0;
 }
 
-.weather-info > .name{
+.weather-info > .name {
   font-weight: var(--min-font-size);
   font-size: var(--secondary-font-size);
   margin: 0;
 }
 
-.weather-title > .weather-text{
-  margin:0;
+.weather-title > .weather-text {
+  margin: 0;
   font-size: var(--tertiary-font-size);
   font-weight: var(--primary-font-weight);
   color: #bf4b43;
@@ -115,7 +115,7 @@
 
 /*MoreInfo Styles*/
 
-.info{
+.info {
   display: flex;
   margin-bottom: 8px;
   font-size: var(--tertiary-font-size);
@@ -123,7 +123,7 @@
 }
 
 /* Local Time Styles */
-.time-window{
+.time-window {
   flex: 1;
   padding: 35px;
   background-color: var(--primary-col);
@@ -133,45 +133,42 @@
   background-position: center;
   display: flex;
   flex-direction: column;
-  align-items: end;  
+  align-items: end;
 }
 
-.local-time{
+.local-time {
   font-size: var(--primary-font-size);
   text-align: right;
-  font-weight:var(--primary-font-weight) ;
+  font-weight: var(--primary-font-weight);
 }
 
-.current-date{
-  font-size:var(--tertiary-font-size);
+.current-date {
+  font-size: var(--tertiary-font-size);
   text-align: right;
-  font-weight:var(--min-font-weight) 
 }
-
-
 
 /* Media query for tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
-  .weatherApp{
+  .weatherApp {
     height: auto;
     min-height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     background-color: var(--primary-col);
     background-image: url(./assets/01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
   }
-  
-  .card{
+
+  .card {
     width: 360px;
     min-width: 60%;
     box-sizing: border-box;
   }
-  
-  .time-window{
+
+  .time-window {
     flex: none;
     background-image: none;
     box-sizing: border-box;
@@ -183,24 +180,24 @@
 
 /* Media query for mobile devices (max-width: 768px and max-width: 480px) */
 @media (max-width: 768px) {
- .card{
+  .card {
     background-color: var(--primary-col);
     width: 100wh;
     min-width: 100%;
     height: auto;
   }
 
-  .time-window{
+  .time-window {
     width: 100wh;
     min-width: 100%;
     height: auto;
   }
 
   @media (max-width: 480px) {
-    .weatherApp{
-      justify-content: start ;
+    .weatherApp {
+      justify-content: start;
       background-color: var(--primary-col);
-      background-image:none;
+      background-image: none;
     }
   }
 }
