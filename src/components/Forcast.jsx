@@ -1,5 +1,4 @@
 import React from 'react';
-import cloud from '../assets/cloud.png';
 import { useWeather } from '../context/weatherContext';
 
 function Forcast() {

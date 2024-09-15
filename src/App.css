@@ -147,6 +147,12 @@
   text-align: right;
 }
 
+.last-update{
+  text-align: right;
+  color: #fff;
+  margin: 20px 0;
+}
+
 /* Media query for tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
   .weatherApp {
@@ -175,6 +181,11 @@
     align-items: center;
     width: 360px;
     min-width: 60%;
+  }
+
+  .last-update{
+    text-align: center;
+    color: #fff;
   }
 }
 

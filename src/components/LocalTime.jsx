@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import '../App.css';
 import { useWeather } from '../context/weatherContext';
+import '../App.css';
 
 function LocalTime() {
   const weekDays = [
@@ -58,7 +58,7 @@ function LocalTime() {
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
-  }, [weather?.data?.location?.localtime]); // Re-run when the weather location's local time changes
+  }, [weather?.data?.location?.localtime]);
 
   return (
     <section className='time-window'>
@@ -70,6 +70,12 @@ function LocalTime() {
       <span className='local-time'>{`${hours}:${minutes}:${seconds}`}</span>
       <span className='current-date'>
         {weekDay}, {dd} {mm} {yy}
+      </span>
+
+      <span className='last-update'>
+        <b style={{ color: '#bf4b43' }}>Last Updated</b>
+        <br />
+        {weather?.data?.current?.last_updated}
       </span>
     </section>
   );

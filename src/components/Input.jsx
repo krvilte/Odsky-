@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import search from '../assets/search.png';
-import '../App.css';
 import { useWeather } from '../context/weatherContext';
+import '../App.css';
 
 function Input() {
   const weather = useWeather();
   const [city, setCity] = useState(weather.searchCity);
-
-  console.log(weather);
 
   //Handle Srarched City
   function handleSearch() {
