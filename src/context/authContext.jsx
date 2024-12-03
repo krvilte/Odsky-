@@ -1,4 +1,11 @@
 import { createContext, useContext } from "react";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { auth } from "../config/firebase";
 
 const methods = {
   logIn: () => {},
