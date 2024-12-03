@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 body {
-  margin: 0;
-  place-items: center;
-  box-sizing: border-box;
-
-  background-color: var(--primary-col);
-  background-image: url(../public//assets/bg.jpg);
-  background-size: cover;
+  background-image: url("../src/assets/01.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-color: #a594f9;
 }
