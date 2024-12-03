@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/icon/logo";
-import { Link } from "react-router-dom"; // Changed to react-router-dom
+import { Link, useNavigate } from "react-router-dom"; // Changed to react-router-dom
 import { useAuth } from "../../context/authContext";
-import { auth } from "../../config/firebase";
 
 const Login = () => {
   const { logIn, googleSignIn } = useAuth();
@@ -10,14 +9,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   console.log(email, password);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await logIn(email, password);
-      console.log("Logged In Successfully");
-      console.log(auth.currentUser); // You can check if the user is logged in here
+      navigate("/");
     } catch (error) {
       console.error("Error logging in: ", error.message);
     }
@@ -26,6 +26,7 @@ const Login = () => {
   const signInWithGoogle = async () => {
     try {
       await googleSignIn();
+      navigate("/");
     } catch (error) {
       console.error("Error in google sign in: ", error.message);
     }
