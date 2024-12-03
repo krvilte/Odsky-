@@ -12,9 +12,33 @@ const useAuth = () => {
 };
 
 const AuthProvider = ({ children }) => {
-  const logIn = async () => {};
-  const signUp = async () => {};
-  const googleSignIn = async () => {};
+  // Login with email and password
+  const logIn = async (email, password) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  //   Signup with email and password
+  const signUp = async (email, password) => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  //   Login with google
+  const googleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      throw error;
+    }
+  };
 
   return (
     <authContext.Provider value={{ logIn, signUp, googleSignIn }}>
