@@ -2,14 +2,15 @@ import React from "react";
 import SearchCity from "./components/SearchCity";
 import Forcast from "./components/Forcast";
 import LocalTime from "./components/LocalTime";
+import Logo from "./assets/icon/logo";
 import { WeatherProvider } from "./context/weatherContext";
 function App() {
   return (
     <WeatherProvider>
       <section className="relative min-h-screen min-w-screen ">
-        <h1 className="text-center text-3xl text-white font-semibold max-w-lg mx-auto my-8">
-          Odsky-
-        </h1>
+        <div className="m-auto w-[100px] my-6">
+          <Logo color={"#fff"} />
+        </div>
 
         <SearchCity />
         <Forcast />

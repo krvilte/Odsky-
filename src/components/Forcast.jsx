@@ -1,12 +1,9 @@
 import React from "react";
 import { useWeather } from "../context/weatherContext";
-import LocalTime from "./LocalTime";
 
 function Forcast() {
   const weather = useWeather();
   const weatherIcon = weather?.data?.current?.condition?.icon;
-
-  console.log(weather);
 
   return (
     <>

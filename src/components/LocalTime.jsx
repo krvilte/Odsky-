@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useWeather } from "../context/weatherContext";
-import "../App.css";
 
 function LocalTime() {
   const weekDays = [

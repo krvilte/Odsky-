@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaCog, FaSignOutAlt } from "react-icons/fa";
+import { Link } from "react-router";
+import Logo from "../assets/icon/logo";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +14,10 @@ function Navbar() {
     <nav className="bg-primary-500 text-white">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <div className="text-xl font-bold">
-          <a href="/">MyLogo</a>
+        <div className="text-xl font-bold w-14">
+          <Link to={"/"}>
+            <Logo color={"#fff"} />
+          </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}

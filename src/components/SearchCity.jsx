@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useWeather } from "../context/weatherContext";
-import "../App.css";
 
 function SearchCity() {
   const weather = useWeather();
