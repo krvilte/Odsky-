@@ -38,7 +38,7 @@ const Login = () => {
         <div className="w-20 m-auto">
           <Logo color={"gray"} />
         </div>
-        <h2 className="text-3xl font-semibold text-indigo-700 text-center">
+        <h2 className="text-3xl font-semibold text-primary-700 text-center">
           Login
         </h2>
         <form onSubmit={handleLogin} className="mt-8 space-y-6">
@@ -55,7 +55,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               name="email"
               placeholder="Enter your email"
-              className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-sm focus:ring-indigo-500 focus:border-indigo-500"
+              className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
 
@@ -72,13 +72,13 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               name="password"
               placeholder="Enter your password"
-              className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-sm focus:ring-indigo-500 focus:border-indigo-500"
+              className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white py-3 px-4 rounded-md text-sm hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500"
+            className="w-full bg-primary-600 text-white py-3 px-4 rounded-md text-sm hover:bg-primary-700 focus:ring-2 focus:ring-primary-500"
           >
             Login
           </button>
@@ -96,7 +96,7 @@ const Login = () => {
 
         <p className="mt-6 text-sm text-gray-600 text-center">
           Don't have an account?{" "}
-          <Link to="/signup" className="text-indigo-600 hover:underline">
+          <Link to="/signup" className="text-primary-600 hover:underline">
             Sign up
           </Link>
         </p>
