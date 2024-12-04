@@ -7,8 +7,8 @@ import { WeatherProvider } from "./context/weatherContext";
 function App() {
   return (
     <WeatherProvider>
-      <section className="relative min-h-screen min-w-screen ">
-        <div className="m-auto w-[100px] my-6">
+      <section className="bg-primary-300 relative min-h-screen min-w-screen ">
+        <div className="m-auto py-6 w-[100px]">
           <Logo color={"#fff"} />
         </div>
 

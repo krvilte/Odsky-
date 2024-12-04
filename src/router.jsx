@@ -4,8 +4,22 @@ import App from "./App";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import NotFound from "./pages/pageNotFound";
+import Settings from "./pages/settings";
+import RequireAuth from "./components/requireAuth";
 
 const router = createBrowserRouter([
+  {
+    element: <RequireAuth />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: "/settings",
+        errorElement: <NotFound />,
+        element: <Settings />,
+      },
+    ],
+  },
+
   {
     path: "",
     element: <Layout />,
